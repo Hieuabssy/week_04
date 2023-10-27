@@ -36,9 +36,7 @@ int main() {
             second = 00;
             minute++;
         }
-        if (second == 0) {
-            PlaySound(TEXT("D:\\code c++\\doan carrrrrrro\\New folder\\caro_hcmus-master\\Release\\tick.wav"), NULL, SND_FILENAME);
-        }
+      
         GotoXY(0, 2);
         if (count == ss + 1) break;
         if (hour <= 9 and hour >= 0) cout << "0";
@@ -54,7 +52,11 @@ int main() {
             if (COMMAND == 27) break;
             
         }
-        Sleep(1000);
+        if (second != 0) Sleep(1000);
+        else Sleep(500);
+        if (second == 0) {
+            PlaySound(TEXT("tick.wav"), NULL, SND_FILENAME);
+        }
     }
  
     return 0;

@@ -4,10 +4,11 @@ using namespace std;
 
 int main() {
 	int a[4] = { 500,200,100,50 };
-	int money;
+	int money, money1;
 	int count = 1;
 	cout << "Nhap so tien can doi: ";
-	cin >> money;
+	cin >> money1;
+	money = money1 / 1000;
 	for (int i = 0; i <= money / a[0]; i++) {
 		for (int j = 0; j <= money / a[1]; j++) {
 			for (int k = 0; k <= money / a[2]; k++) {
