@@ -52,10 +52,10 @@ int main() {
             if (COMMAND == 27) break;
             
         }
-        if (second != 0) Sleep(1000);
-        else Sleep(500);
+        Sleep(1000);
+       
         if (second == 0) {
-            PlaySound(TEXT("tick.wav"), NULL, SND_FILENAME);
+            PlaySound(TEXT("tick.wav"), NULL, SND_FILENAME | SND_ASYNC);
         }
     }
  
